@@ -20,7 +20,7 @@ pip install -r requirements.txt && python3 -m src.main
 ```
 ## Running using Docker
 ```bash
-docker build -t tag-all-bot . &&\
+docker build -t tag-all-bot https://github.com/om3lette/tag-all-bot.git &&\
 docker run \
 -v <YOUR_APPLICABLE_PATH>/tag_all.db:/tag-all-bot/tag_all.db\
 -v <YOUR_PATH>/.env:/tag-all-bot/.env\
