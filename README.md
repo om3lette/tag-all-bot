@@ -19,10 +19,12 @@ Then install the dependencies and launch the bot itself
 pip install -r requirements.txt && python3 -m src.main
 ```
 ## Running using Docker
+Make sure that `tag-all.db` exists before running the following command.\
+Otherwise, Docker will create a folder named `tag-all.db`
 ```bash
 docker build -t tag-all-bot https://github.com/om3lette/tag-all-bot.git &&\
 docker run \
--v <YOUR_APPLICABLE_PATH>/tag_all.db:/tag-all-bot/tag_all.db\
--v <YOUR_PATH>/.env:/tag-all-bot/.env\
---name tag-all-bot --rm tag-all-bot
+-v <YOUR_APPLICABLE_PATH>/tag-all.db:/tag-all-bot/tag_all.db \
+-v <YOUR_PATH>/.env:/tag-all-bot/.env \
+-d --name tag-all-bot --rm tag-all-bot
 ```
